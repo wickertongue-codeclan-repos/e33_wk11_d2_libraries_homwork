@@ -66,5 +66,24 @@ public class LibraryTest {
         assertEquals(1, borrower.bookCount());
     }
 
+    @Test
+    public void libraryCanGetNumberOfBooksByGenre() {
+        library.addBook(book);
+        library.addBook(book1);
+        library.addBook(book);
+        assertEquals(2, library.getGenreCount(book));
+    }
+
+    @Test
+    public void libraryCanTrackBooksByNumberOfGenre__AddBook(){
+        library.addBook(book);
+        library.addBook(book1);
+        library.addBook(book);
+        library.addBook(book);
+        library.addBook(book);
+        assertEquals(5, library.bookCount());
+        assertEquals(4, library.getGenreCount(book));
+    }
+
 
 }
