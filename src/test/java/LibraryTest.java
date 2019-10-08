@@ -18,5 +18,10 @@ public class LibraryTest {
         assertEquals(5, library.getCapacity());
     }
 
+    @Test
+    public void libraryStartsWithZeroBooks(){
+        assertEquals(0, library.bookCount());
+    }
+
 
 }
